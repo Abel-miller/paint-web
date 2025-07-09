@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="toolbar">
+            <div class="tool-group"><span class="tooltip-text">Pincel</span><button class="tool active" data-tool="brush">🖌️</button></div>
+            <div class="tool-group"><span class="tooltip-text">Línea</span><button class="tool" data-tool="line">📏</button></div>
+            <div class="tool-group"><span class="tooltip-text">Rectángulo</span><button class="tool" data-tool="rectangle">⬜</button></div>
+            <div class="tool-group"><span class="tooltip-text">Círculo</span><button class="tool" data-tool="circle">⚪</button></div>
+            <div class="tool-group"><span class="tooltip-text">Borrador</span><button class="tool" data-tool="eraser">🧼</button></div>
+        </aside>
+        <main><canvas id="paint-canvas" width="800" height="600"></canvas></main>
+        <aside class="controls">
+            <div class="color-palette">
+                <div class="color-box active" style="background-color: #000000;" data-color="#000000"></div>
+                <div class="color-box" style="background-color: #FF0000;" data-color="#FF0000"></div>
+                <div class="color-box" style="background-color: #0000FF;" data-color="#0000FF"></div>
+                <div class="color-box" style="background-color: #008000;" data-color="#008000"></div>
+                <div class="color-box" style="background-color: #FFFF00;" data-color="#FFFF00"></div>
+                <div class="color-box" style="background-color: #FFA500;" data-color="#FFA500"></div>
+                <div class="color-box" style="background-color: #800080;" data-color="#800080"></div>
+                <div class="color-box" style="background-color: #A52A2A;" data-color="#A52A2A"></div>
+            </div>
+            <div class="action-buttons">
+                <button id="clear-canvas">Limpiar</button>
+                <a id="save-image" href="#" download="mi-dibujo.png">Guardar PNG</a>
+            </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
